@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 50, 34;  /* irish-green-800 */
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 240, 249, 244;  /* irish-green-50 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-white to-irish-green-50 text-irish-green-900;
+    font-family: 'Open Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, serif;
+    @apply text-irish-green-900;
+  }
+}
+
+@layer utilities {
+  /* Text gradient utilities */
+  .text-gradient-amber {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-pub {
+    background: linear-gradient(135deg, #6d8439 0%, #96ad5c 50%, #6d8439 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Shake animation for errors */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+    20%, 40%, 60%, 80% { transform: translateX(4px); }
+  }
+
+  .shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pub-400 hover:bg-pub-500 rounded-full;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-amber-200 text-pub-900;
+  }
+
+  ::-moz-selection {
+    @apply bg-amber-200 text-pub-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-irish-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-irish-green-600 transition-all duration-300 shadow-irish hover:shadow-2xl hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-gold-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gold-orange-600 transition-all duration-300 shadow-gold hover:shadow-2xl hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-irish-green-500 text-irish-green-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-irish-green-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-irish hover:scale-105 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-8 border border-irish-green-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:border-irish-green-300;
+  }
+
+  .card-feature {
+    @apply bg-gradient-to-br from-white to-irish-green-50 rounded-2xl p-8 shadow-lg border border-irish-green-100 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300;
+  }
+
+  .card-testimonial {
+    @apply bg-gradient-to-br from-white via-cream-50 to-irish-green-50 rounded-2xl p-8 shadow-xl border border-irish-green-100 hover:shadow-2xl transition-all duration-300;
+  }
+
+  .pricing-card {
+    @apply bg-white rounded-3xl shadow-2xl p-10 border-2 border-transparent hover:border-irish-green-500 hover:shadow-glow transition-all duration-500 hover:scale-105;
+  }
+
+  .pricing-card-featured {
+    @apply bg-gradient-to-br from-irish-green-500 to-irish-green-600 text-white rounded-3xl shadow-2xl p-10 border-2 border-irish-green-400 shadow-glow scale-105 hover:scale-110 transition-all duration-500;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-irish-green-600 via-irish-green-500 to-sky-blue-500;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-orange-500 to-gold-orange-600;
+  }
+
+  .hero-pattern {
+    background-image:
+      radial-gradient(circle at 20% 80%, rgba(0, 104, 71, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(255, 140, 0, 0.05) 0%, transparent 50%);
+  }
+
+  .nav-link {
+    @apply text-irish-green-700 hover:text-irish-green-500 font-semibold transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-irish-green-500 hover:after:w-full after:transition-all after:duration-300;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-irish-green-900;
+  }
+
+  .section-subheading {
+    @apply text-xl md:text-2xl text-irish-green-600 max-w-3xl mx-auto mb-16;
+  }
+
+  .input-field {
+    @apply w-full px-6 py-4 border-2 border-irish-green-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-irish-green-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .textarea-field {
+    @apply w-full px-6 py-4 border-2 border-irish-green-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-irish-green-500 focus:border-transparent transition-all duration-200 min-h-[150px] resize-y;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-irish-green-100 text-irish-green-700 font-semibold text-sm;
+  }
+
+  .divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-irish-green-300 to-transparent my-12;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .text-shadow-xl {
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* Custom scrollbar for Irish theme */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f9f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #006847 0%, #00563a 100%);
+  border-radius: 7px;
+  border: 2px solid #f0f9f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00563a 0%, #00442e 100%);
+}
+
+/* Selection colors */
+::selection {
+  background: #006847;
+  color: white;
+}
+
+::-moz-selection {
+  background: #006847;
+  color: white;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, textarea, select {
+  @apply transition-all duration-200;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-irish-green-500;
+}
+
+/* Floating blob animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(-10px, -10px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 8s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}

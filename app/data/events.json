@@ -1,0 +1,60 @@
+{
+  "lastUpdated": "2025-10-18",
+  "recurring": [
+    {
+      "name": "Live Trad Music",
+      "day": "Friday",
+      "time": "21:00",
+      "description": "Local musicians playing traditional Irish tunes",
+      "image": "/images/events/trad-music.webp"
+    },
+    {
+      "name": "Live Music Weekend",
+      "day": "Saturday",
+      "time": "21:30",
+      "description": "Rock, folk, and acoustic acts",
+      "image": "/images/events/live-band.webp"
+    },
+    {
+      "name": "Quiz Night",
+      "day": "Wednesday",
+      "time": "20:00",
+      "description": "General knowledge quiz, €20 per team of 4",
+      "prize": "Winner takes all the entry fees!",
+      "image": "/images/events/quiz-night.webp"
+    },
+    {
+      "name": "Sunday Roast",
+      "day": "Sunday",
+      "time": "12:30-17:00",
+      "description": "Traditional roast dinner with all the trimmings",
+      "price": "€14.50",
+      "image": "/images/events/sunday-roast.webp"
+    }
+  ],
+  "upcoming": [
+    {
+      "name": "Cork vs Kerry - GAA Screening",
+      "date": "2025-10-25",
+      "time": "19:00",
+      "description": "Watch the match on our big screens. Kitchen open for the game.",
+      "type": "sports"
+    },
+    {
+      "name": "Halloween Party",
+      "date": "2025-10-31",
+      "time": "20:00",
+      "description": "Costume contest, prizes, DJ until late",
+      "type": "special"
+    },
+    {
+      "name": "Christmas Reservations Open",
+      "date": "2025-12-01",
+      "description": "Book your Christmas party now - limited spaces",
+      "type": "announcement"
+    }
+  ],
+  "sports": {
+    "message": "We show all major GAA matches, rugby internationals, and Premier League football. Check our Facebook for this week's fixtures."
+  }
+}

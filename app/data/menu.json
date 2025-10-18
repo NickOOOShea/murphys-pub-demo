@@ -1,0 +1,49 @@
+{
+  "lastUpdated": "2025-10-18",
+  "food": {
+    "starters": [
+      { "name": "Soup of the Day", "description": "Served with brown bread", "price": 6.50 },
+      { "name": "Garlic Mushrooms", "description": "On toasted sourdough", "price": 8.50 },
+      { "name": "Chicken Wings", "description": "Buffalo or BBQ sauce", "price": 9.00 },
+      { "name": "Seafood Chowder", "description": "Cork Harbor catch", "price": 10.50 }
+    ],
+    "mains": [
+      { "name": "Fish & Chips", "description": "Beer-battered haddock, hand-cut chips, mushy peas", "price": 14.50 },
+      { "name": "Guinness Beef Stew", "description": "Slow-cooked with root vegetables, served with mash", "price": 15.00 },
+      { "name": "Murphy's Burger", "description": "8oz beef, cheddar, bacon, onion rings, chips", "price": 14.00 },
+      { "name": "Shepherd's Pie", "description": "Traditional recipe, topped with creamy mash", "price": 13.50 },
+      { "name": "Chicken Curry", "description": "Mild Irish-style curry, rice, poppadom", "price": 13.00 },
+      { "name": "Bangers & Mash", "description": "Clonakilty sausages, onion gravy, mashed potato", "price": 12.50 }
+    ],
+    "sides": [
+      { "name": "Hand-Cut Chips", "price": 4.00 },
+      { "name": "Onion Rings", "price": 4.50 },
+      { "name": "Side Salad", "price": 4.00 },
+      { "name": "Garlic Bread", "price": 4.50 }
+    ],
+    "desserts": [
+      { "name": "Bailey's Cheesecake", "description": "Irish cream cheesecake", "price": 6.50 },
+      { "name": "Apple Crumble", "description": "Served warm with custard", "price": 6.00 },
+      { "name": "Sticky Toffee Pudding", "description": "Warm pudding, toffee sauce, ice cream", "price": 6.50 }
+    ]
+  },
+  "drinks": {
+    "onTap": [
+      { "name": "Guinness", "sizes": [{ "size": "Pint", "price": 5.20 }] },
+      { "name": "Murphy's Stout", "sizes": [{ "size": "Pint", "price": 5.00 }] },
+      { "name": "Beamish", "sizes": [{ "size": "Pint", "price": 5.00 }] },
+      { "name": "Heineken", "sizes": [{ "size": "Pint", "price": 5.50 }] },
+      { "name": "Bulmers", "sizes": [{ "size": "Pint", "price": 5.80 }] }
+    ],
+    "spirits": [
+      { "category": "Irish Whiskey", "items": ["Jameson", "Powers", "Redbreast 12"] },
+      { "category": "Gin", "items": ["Dingle Gin", "Gunpowder Gin", "Hendricks"] },
+      { "category": "Vodka", "items": ["Smirnoff", "Grey Goose"] }
+    ],
+    "wine": {
+      "red": ["House Red €6/glass €22/bottle", "Malbec €28/bottle"],
+      "white": ["House White €6/glass €22/bottle", "Sauvignon Blanc €26/bottle"]
+    }
+  },
+  "allergenNotice": "All dishes made fresh daily. Please ask your server about allergens."
+}

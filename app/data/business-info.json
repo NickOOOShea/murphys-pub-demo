@@ -1,0 +1,32 @@
+{
+  "name": "Murphy's Pub",
+  "tagline": "Traditional Irish Hospitality Since 1952",
+  "heroHeadline": "Pull up a stool. You're among friends.",
+  "heroTagline": "Serving Cork's finest pints and proper craic since 1952.",
+  "established": 1952,
+  "description": "A family-owned Cork institution serving proper pints, hearty food, and genuine craic for over 70 years.",
+  "story": "Three generations of Murphys have poured pints behind this bar. What started as Seán Murphy's dream in 1952 has become a Cork institution—where locals bring visitors, where celebrations happen, and where you're never just a customer.",
+  "heritage": "Still family-owned. Still pouring the same stout.",
+  "address": {
+    "street": "12 Main Street",
+    "city": "Cork",
+    "county": "Cork",
+    "country": "Ireland",
+    "eircode": "T12 X456"
+  },
+  "contact": {
+    "phone": "+353 21 427 1234",
+    "email": "hello@murphyspub.ie",
+    "bookings": "+353 21 427 1235"
+  },
+  "social": {
+    "facebook": "https://facebook.com/murphyspubcork",
+    "instagram": "@murphyspubcork",
+    "twitter": "@murphyspub"
+  },
+  "location": {
+    "lat": 51.8969,
+    "lng": -8.4863,
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.8947!2d-8.4863!3d51.8969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDUzJzQ4LjgiTiA4wrAyOScxMC43Ilc!5e0!3m2!1sen!2sie!4v1234567890"
+  }
+}

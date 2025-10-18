@@ -1,0 +1,22 @@
+{
+  "regular": {
+    "monday": { "open": "12:00", "close": "23:30", "kitchen": "12:00-21:00" },
+    "tuesday": { "open": "12:00", "close": "23:30", "kitchen": "12:00-21:00" },
+    "wednesday": { "open": "12:00", "close": "23:30", "kitchen": "12:00-21:00" },
+    "thursday": { "open": "12:00", "close": "23:30", "kitchen": "12:00-21:30" },
+    "friday": { "open": "12:00", "close": "01:00", "kitchen": "12:00-22:00" },
+    "saturday": { "open": "12:00", "close": "01:00", "kitchen": "12:00-22:00" },
+    "sunday": { "open": "12:30", "close": "23:00", "kitchen": "12:30-20:30" }
+  },
+  "holidays": {
+    "christmas": "Closed Christmas Day",
+    "goodFriday": "Closed Good Friday",
+    "stPatricks": "12:00 - Late (St. Patrick's Day)"
+  },
+  "notes": [
+    "Kitchen closes 30 minutes before last orders",
+    "Children welcome until 9pm",
+    "Live music every Friday and Saturday night"
+  ],
+  "contactNote": "We try to answer calls and emails between 10 am and 10 pm — or just pop in for a pint!"
+}
