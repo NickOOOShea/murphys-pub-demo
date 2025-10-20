@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-pub-900 text-white py-12">
       <div className="container mx-auto px-4">
-        {/* 4 Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        {/* 5 Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-8">
           {/* About */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-amber-400">Murphy's Pub</h3>
@@ -54,6 +54,15 @@ export default function Footer() {
               <Link href="/events" className="block hover:text-amber-400 transition">Events</Link>
               <Link href="/gallery" className="block hover:text-amber-400 transition">Gallery</Link>
               <Link href="/contact" className="block hover:text-amber-400 transition">Contact</Link>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4 text-amber-400">Legal</h4>
+            <div className="space-y-2 text-gray-300">
+              <Link href="/privacy" className="block hover:text-amber-400 transition">Privacy Policy</Link>
+              <Link href="/terms" className="block hover:text-amber-400 transition">Terms of Service</Link>
             </div>
           </div>
 
