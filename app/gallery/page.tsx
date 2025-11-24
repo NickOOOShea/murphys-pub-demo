@@ -1,0 +1,105 @@
+import Gallery from '@/components/Gallery'
+
+export const metadata = {
+  title: "Gallery | Murphy's Pub",
+  description: 'Photos from Murphy\'s Pub - cozy interiors, hearty food, live music nights, and happy faces. See what makes us Cork\'s favorite local.',
+}
+
+// Sample gallery images with story captions
+const galleryImages = [
+  {
+    src: '/images/gallery/interior-1.jpg',
+    alt: 'Cozy pub interior with wooden bar',
+    caption: 'The same bar where three generations of Murphys have pulled pints'
+  },
+  {
+    src: '/images/gallery/food-1.jpg',
+    alt: 'Fish and chips with mushy peas',
+    caption: 'Tom\'s famous beer-battered haddock - the recipe hasn\'t changed since 1952'
+  },
+  {
+    src: '/images/gallery/music-1.jpg',
+    alt: 'Traditional music session',
+    caption: 'Friday night sessions - these lads have been playing here for 20 years'
+  },
+  {
+    src: '/images/gallery/pint-1.jpg',
+    alt: 'Perfect pint of Guinness',
+    caption: 'A proper pour - we take our time, 119.5 seconds every time'
+  },
+  {
+    src: '/images/gallery/crowd-1.jpg',
+    alt: 'Busy pub night',
+    caption: 'Match night madness - Cork vs Kerry, August 2024'
+  },
+  {
+    src: '/images/gallery/exterior-1.jpg',
+    alt: 'Murphy\'s Pub exterior at night',
+    caption: 'The glow that\'s welcomed Cork locals for over 70 years'
+  },
+  {
+    src: '/images/gallery/food-2.jpg',
+    alt: 'Guinness beef stew',
+    caption: 'Slow-cooked for 4 hours - Gran Murphy\'s original recipe'
+  },
+  {
+    src: '/images/gallery/staff-1.jpg',
+    alt: 'Bar staff smiling',
+    caption: 'The crew - between us, we\'ve got 80 years behind this bar'
+  },
+  {
+    src: '/images/gallery/quiz-1.jpg',
+    alt: 'Quiz night participants',
+    caption: 'Wednesday quiz - they take it seriously here!'
+  },
+]
+
+export default function GalleryPage() {
+  return (
+    <main>
+      {/* Page Hero */}
+      <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-pub-700 to-pub-900 text-white">
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Gallery</h1>
+          <p className="text-xl text-gray-200">
+            A glimpse inside Murphy's
+          </p>
+        </div>
+      </section>
+
+      {/* Gallery Grid */}
+      <section className="py-20 bg-gradient-to-b from-white to-cream-50">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
+            Hover over photos to see the stories behind them
+          </p>
+
+          <Gallery images={galleryImages} columns={3} />
+
+          {/* Note about images */}
+          <p className="text-center text-sm text-gray-500 mt-12 italic">
+            Want to see your photo here? Tag us @murphyspubcork on Instagram
+          </p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-pub-800 text-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-4">
+            Come Make Your Own Memories
+          </h2>
+          <p className="text-xl text-gray-200 mb-8">
+            We'll save you a seat
+          </p>
+          <a
+            href="/contact"
+            className="inline-block px-8 py-4 bg-amber-500 text-pub-900 rounded-lg font-semibold text-lg hover:bg-amber-400 transition-all transform hover:scale-105 shadow-xl"
+          >
+            Visit Us
+          </a>
+        </div>
+      </section>
+    </main>
+  )
+}
