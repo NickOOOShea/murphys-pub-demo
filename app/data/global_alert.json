@@ -1,7 +1,10 @@
 {
-  "active": false,
+  "active": true,
   "level": "info",
-  "headline": "",
-  "message": "",
-  "expires_at": null
+  "headline": "Temporary Closure",
+  "message": "Closed tomorrow for private function",
+  "expires_at": null,
+  "type": "closure",
+  "startDate": null,
+  "endDate": null
 }
