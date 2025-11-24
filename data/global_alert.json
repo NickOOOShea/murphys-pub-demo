@@ -1,0 +1,128 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-11-19T12:00:00Z",
+  "updatedBy": "manual",
+  "active": false,
+  "level": "info",
+  "level_options": ["info", "warning", "urgent", "emergency"],
+  "headline": "",
+  "message": "",
+  "expires_at": null,
+  "display_settings": {
+    "show_on_all_pages": true,
+    "dismissible": true,
+    "icon": "auto"
+  },
+  "examples": [
+    {
+      "scenario": "Storm Red Warning",
+      "config": {
+        "active": true,
+        "level": "emergency",
+        "headline": "Storm Red Warning - Closed Today",
+        "message": "Due to Met Éireann Red Warning for Storm Éowyn, we are closed today (Friday 21st Nov) for safety. We'll reopen Saturday at 12pm. Stay safe!",
+        "expires_at": "2025-11-22T12:00:00"
+      }
+    },
+    {
+      "scenario": "Unexpected Closure",
+      "config": {
+        "active": true,
+        "level": "warning",
+        "headline": "Closed Today - Reopening Tomorrow",
+        "message": "We're unexpectedly closed today due to a family emergency. We'll be back tomorrow (Tuesday) at our usual time. Apologies for any inconvenience.",
+        "expires_at": "2025-11-21T12:00:00"
+      }
+    },
+    {
+      "scenario": "Local Funeral",
+      "config": {
+        "active": true,
+        "level": "info",
+        "headline": "Closing Early for Funeral",
+        "message": "We'll be closing at 2pm today to attend the funeral of Paddy Murphy, a dear friend and loyal customer. We'll reopen tomorrow as normal.",
+        "expires_at": "2025-11-20T14:00:00"
+      }
+    },
+    {
+      "scenario": "Water Outage",
+      "config": {
+        "active": true,
+        "level": "warning",
+        "headline": "No Hot Food Today",
+        "message": "Due to planned water outage on Main Street, we can't serve hot food today. Bar and drinks still available. Full menu back tomorrow.",
+        "expires_at": "2025-11-20T23:59:00"
+      }
+    },
+    {
+      "scenario": "Special Event",
+      "config": {
+        "active": true,
+        "level": "info",
+        "headline": "Live Music Tonight!",
+        "message": "Traditional Irish music session tonight from 9pm with The Dingle Boys. No cover charge, all welcome!",
+        "expires_at": "2025-11-20T23:00:00"
+      }
+    }
+  ],
+  "level_descriptions": {
+    "info": {
+      "color": "blue",
+      "icon": "ℹ️",
+      "use_case": "General announcements, events, non-critical updates"
+    },
+    "warning": {
+      "color": "orange",
+      "icon": "⚠️",
+      "use_case": "Important notices, service disruptions, early closures"
+    },
+    "urgent": {
+      "color": "red",
+      "icon": "❗",
+      "use_case": "Emergency closures, safety warnings, critical information"
+    },
+    "emergency": {
+      "color": "darkred",
+      "icon": "🚨",
+      "use_case": "Storm warnings, immediate danger, total closures"
+    }
+  },
+  "usage_notes": [
+    "Set active: true to display banner on website",
+    "Set active: false to hide banner",
+    "expires_at: null means banner shows until manually disabled",
+    "expires_at: ISO timestamp will auto-hide banner after that time",
+    "level determines visual urgency (color, icon, prominence)",
+    "Always include clear call-to-action or next steps in message",
+    "Keep message concise (max 2-3 sentences)",
+    "Update expires_at when situation resolved"
+  ],
+  "voice_commands": [
+    {
+      "example": "Put up a notice that we're closed today due to the storm",
+      "result": {
+        "active": true,
+        "level": "urgent",
+        "headline": "Closed Today - Storm",
+        "message": "We're closed today due to storm warnings. We'll reopen as soon as it's safe.",
+        "expires_at": "2025-11-20T23:59:00"
+      }
+    },
+    {
+      "example": "Remove the storm notice",
+      "result": {
+        "active": false
+      }
+    },
+    {
+      "example": "Add an announcement about live music tonight",
+      "result": {
+        "active": true,
+        "level": "info",
+        "headline": "Live Music Tonight",
+        "message": "Live music tonight from 9pm. All welcome!",
+        "expires_at": "2025-11-20T23:00:00"
+      }
+    }
+  ]
+}
