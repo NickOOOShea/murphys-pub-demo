@@ -9,24 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Murphy's Pub - "The Snug" Design System
-        // Cozy, traditional, warm lighting, wood tones
+        // Murphy's Pub - "The Emerald" Design System
+        // Irish green theme, traditional, warm lighting, wood tones
 
-        // Primary: Whiskey Amber
-        'whiskey': {
-          50: '#fef9f3',
-          100: '#fcefd9',
-          200: '#f8dbb2',
-          300: '#f3c080',
-          400: '#ec9d4d',
-          500: '#e68029',
-          600: '#B5651D', // Primary
-          700: '#9a4f15',
-          800: '#7d3f18',
-          900: '#663517',
+        // Primary: Irish Green
+        'emerald': {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a', // Primary
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
         },
 
-        // Secondary: Dark Wood
+        // Secondary: Dark Wood (unchanged - complements green)
         'wood': {
           50: '#f7f5f3',
           100: '#ede7e1',
@@ -41,7 +41,7 @@ const config: Config = {
           950: '#1A1512', // Background
         },
 
-        // Accent: Cream Foam
+        // Accent: Cream Foam (unchanged - works with green)
         'cream': {
           50: '#fffefb',
           100: '#fefcf6',
@@ -55,7 +55,7 @@ const config: Config = {
           900: '#896140',
         },
 
-        // Text: Aged Paper
+        // Text: Aged Paper (unchanged)
         'paper': {
           50: '#fdfcfa',
           100: '#E8DFD0', // Text on dark
@@ -69,7 +69,7 @@ const config: Config = {
           900: '#514133',
         },
 
-        // Stout colors for special elements
+        // Stout colors for special elements (unchanged)
         'stout': {
           black: '#0d0907',
           brown: '#1a0f0a',
@@ -77,11 +77,11 @@ const config: Config = {
           head: '#fffef8',
         },
 
-        // Brass accents
-        'brass': {
-          light: '#f0c574',
-          DEFAULT: '#d4a657',
-          dark: '#b8860b',
+        // Gold accents (complement to green)
+        'gold': {
+          light: '#fbbf24',
+          DEFAULT: '#f59e0b',
+          dark: '#d97706',
         },
       },
       fontFamily: {
@@ -90,12 +90,12 @@ const config: Config = {
       },
       backgroundImage: {
         'pub-gradient': 'linear-gradient(180deg, #1A1512 0%, #2C1810 50%, #1A1512 100%)',
-        'warm-glow': 'radial-gradient(ellipse at center, rgba(181, 101, 29, 0.15) 0%, transparent 70%)',
+        'warm-glow': 'radial-gradient(ellipse at center, rgba(22, 163, 74, 0.15) 0%, transparent 70%)',
         'wood-grain': 'url("/textures/wood-grain.png")',
       },
       boxShadow: {
         'warm': '0 10px 40px -10px rgba(44, 24, 16, 0.4)',
-        'glow-amber': '0 0 40px -8px rgba(181, 101, 29, 0.4)',
+        'glow-emerald': '0 0 40px -8px rgba(22, 163, 74, 0.4)',
         'lifted': '0 20px 50px -10px rgba(26, 21, 18, 0.5)',
         'card': '0 4px 20px -4px rgba(26, 21, 18, 0.3)',
         'inner-glow': 'inset 0 2px 4px 0 rgba(245, 230, 211, 0.1)',
@@ -116,8 +116,8 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateY(0)' }
         },
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(181, 101, 29, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(181, 101, 29, 0.5)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(22, 163, 74, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(22, 163, 74, 0.5)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
