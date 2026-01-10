@@ -8,47 +8,47 @@ export const metadata = {
 // Sample gallery images with story captions
 const galleryImages = [
   {
-    src: '/images/gallery/interior-1.jpg',
+    src: '/images/gallery/interior-1.webp',
     alt: 'Cozy pub interior with wooden bar',
     caption: 'The same bar where three generations of Murphys have pulled pints'
   },
   {
-    src: '/images/gallery/food-1.jpg',
+    src: '/images/gallery/food-1.webp',
     alt: 'Fish and chips with mushy peas',
     caption: 'Tom\'s famous beer-battered haddock - the recipe hasn\'t changed since 1952'
   },
   {
-    src: '/images/gallery/music-1.jpg',
+    src: '/images/gallery/music-1.webp',
     alt: 'Traditional music session',
     caption: 'Friday night sessions - these lads have been playing here for 20 years'
   },
   {
-    src: '/images/gallery/pint-1.jpg',
+    src: '/images/gallery/pint-1.webp',
     alt: 'Perfect pint of Guinness',
     caption: 'A proper pour - we take our time, 119.5 seconds every time'
   },
   {
-    src: '/images/gallery/crowd-1.jpg',
+    src: '/images/gallery/crowd-1.webp',
     alt: 'Busy pub night',
     caption: 'Match night madness - Cork vs Kerry, August 2024'
   },
   {
-    src: '/images/gallery/exterior-1.jpg',
+    src: '/images/gallery/exterior-1.webp',
     alt: 'Murphy\'s Pub exterior at night',
     caption: 'The glow that\'s welcomed Cork locals for over 70 years'
   },
   {
-    src: '/images/gallery/food-2.jpg',
+    src: '/images/gallery/food-2.webp',
     alt: 'Guinness beef stew',
     caption: 'Slow-cooked for 4 hours - Gran Murphy\'s original recipe'
   },
   {
-    src: '/images/gallery/staff-1.jpg',
+    src: '/images/gallery/staff-1.webp',
     alt: 'Bar staff smiling',
     caption: 'The crew - between us, we\'ve got 80 years behind this bar'
   },
   {
-    src: '/images/gallery/quiz-1.jpg',
+    src: '/images/gallery/quiz-1.webp',
     alt: 'Quiz night participants',
     caption: 'Wednesday quiz - they take it seriously here!'
   },

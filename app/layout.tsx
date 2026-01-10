@@ -44,7 +44,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BarOrPub',
   name: "Murphy's Pub",
-  image: 'https://murphys-pub-demo.pages.dev/images/hero-pub-night.jpg',
+  image: 'https://murphys-pub-demo.pages.dev/images/hero-pub-night.webp',
   description: 'Family-owned traditional Irish pub in Cork since 1952. Hearty food, live music, and proper pints.',
   address: {
     '@type': 'PostalAddress',

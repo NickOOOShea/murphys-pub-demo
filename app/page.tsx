@@ -12,7 +12,7 @@ export default function Home() {
       <Hero
         headline={businessInfo.heroHeadline}
         tagline={businessInfo.heroTagline}
-        backgroundImage="/images/hero-pub-night.jpg"
+        backgroundImage="/images/hero-pub-night.webp"
         ctaButtons={[
           { text: 'View Menu', href: '/menu', variant: 'primary' },
           { text: 'Reserve a Table', href: '/contact', variant: 'secondary' }
@@ -23,7 +23,7 @@ export default function Home() {
       <AboutSection
         story={businessInfo.story}
         heritage={businessInfo.heritage}
-        image="/images/heritage-photo.jpg"
+        image="/images/heritage-photo.webp"
       />
 
       {/* Opening Hours */}
