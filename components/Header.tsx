@@ -39,8 +39,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-whiskey-600 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-glow-amber">
-              <span className="text-wood-950 font-display font-bold text-xl">M</span>
+            <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-glow-amber">
+              <span className="text-white font-display font-bold text-xl">M</span>
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-display font-bold text-cream-300">
@@ -62,13 +62,13 @@ export default function Header() {
                   href={link.href}
                   className={`relative py-2 font-medium transition-colors ${
                     isActive
-                      ? 'text-whiskey-400'
-                      : 'text-paper-100 hover:text-whiskey-400'
+                      ? 'text-emerald-400'
+                      : 'text-paper-100 hover:text-emerald-400'
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-whiskey-500 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
                       isActive ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
                   />
@@ -90,7 +90,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-paper-100 hover:text-whiskey-400 transition-colors rounded-lg hover:bg-wood-900"
+            className="md:hidden p-2 text-paper-100 hover:text-emerald-400 transition-colors rounded-lg hover:bg-wood-900"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -130,8 +130,8 @@ export default function Header() {
                       onClick={() => setMobileMenuOpen(false)}
                       className={`py-3 px-4 rounded-xl text-lg font-medium transition-all ${
                         isActive
-                          ? 'bg-whiskey-600/20 text-whiskey-400'
-                          : 'text-paper-100 hover:bg-wood-800 hover:text-whiskey-400'
+                          ? 'bg-emerald-600/20 text-emerald-400'
+                          : 'text-paper-100 hover:bg-wood-800 hover:text-emerald-400'
                       }`}
                     >
                       {link.label}
@@ -139,15 +139,15 @@ export default function Header() {
                   )
                 })}
 
-                {/* Phone CTA in Mobile */}
-                <div className="pt-4 mt-4 border-t border-wood-800">
+                {/* Mobile CTA */}
+                <div className="mt-6 pt-6 border-t border-wood-700">
                   <a
                     href="tel:+353214271234"
                     className="btn-primary w-full justify-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <Phone className="w-5 h-5" />
-                    Call Us
+                    <Phone className="w-4 h-4" />
+                    Call Us: 021 427 1234
                   </a>
                 </div>
               </div>
