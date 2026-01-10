@@ -2,5 +2,17 @@
   "version": "1.0",
   "lastUpdated": "2025-11-24T12:00:00Z",
   "updatedBy": "manual",
-  "announcements": []
+  "announcements": [
+    {
+      "id": "closure-private-function",
+      "type": "closure",
+      "title": "Closed Tomorrow - Private Function",
+      "active": true,
+      "endDate": "2025-11-25",
+      "message": "We're closed tomorrow for a private function. We'll be back with regular hours the following day.",
+      "priority": "high",
+      "createdAt": "2025-11-24T12:00:00Z",
+      "startDate": "2025-11-25"
+    }
+  ]
 }
