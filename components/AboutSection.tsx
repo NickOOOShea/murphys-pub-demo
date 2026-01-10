@@ -45,8 +45,8 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
               )}
 
               {/* Decorative corner accents */}
-              <div className="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-whiskey-500/40 rounded-tr-lg" />
-              <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-whiskey-500/40 rounded-bl-lg" />
+              <div className="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-emerald-500/40 rounded-tr-lg" />
+              <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-emerald-500/40 rounded-bl-lg" />
             </motion.div>
           </div>
 
@@ -59,7 +59,7 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
               transition={{ duration: 0.6, delay: 0.3 }}
               className="section-heading"
             >
-              <span className="text-gradient-whiskey">
+              <span className="text-gradient-emerald">
                 Three Generations
               </span>
               <br />
@@ -78,7 +78,7 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
 
               {/* Heritage Quote */}
               <div className="relative my-10 py-6 border-t border-b border-wood-700">
-                <p className="text-xl font-display italic text-whiskey-400 text-center">
+                <p className="text-xl font-display italic text-emerald-400 text-center">
                   "{heritage}"
                 </p>
               </div>
@@ -86,15 +86,15 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-10">
                 <div className="text-center p-5 bg-wood-800 rounded-xl border border-wood-700">
-                  <div className="text-3xl font-bold text-whiskey-500 font-display">1952</div>
+                  <div className="text-3xl font-bold text-emerald-500 font-display">1952</div>
                   <div className="text-sm text-paper-200/70 mt-1">Established</div>
                 </div>
                 <div className="text-center p-5 bg-wood-800 rounded-xl border border-wood-700">
-                  <div className="text-3xl font-bold text-whiskey-500 font-display">3</div>
+                  <div className="text-3xl font-bold text-emerald-500 font-display">3</div>
                   <div className="text-sm text-paper-200/70 mt-1">Generations</div>
                 </div>
                 <div className="text-center p-5 bg-wood-800 rounded-xl border border-wood-700">
-                  <div className="text-3xl font-bold text-whiskey-500 font-display">70+</div>
+                  <div className="text-3xl font-bold text-emerald-500 font-display">70+</div>
                   <div className="text-sm text-paper-200/70 mt-1">Years</div>
                 </div>
               </div>
