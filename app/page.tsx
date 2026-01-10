@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import PubAtmosphere from '@/components/PubAtmosphere'
 import AboutSection from '@/components/AboutSection'
 import OpeningHours from '@/components/OpeningHours'
 import businessInfo from './data/business-info.json'
@@ -18,6 +19,9 @@ export default function Home() {
           { text: 'Reserve a Table', href: '/contact', variant: 'secondary' }
         ]}
       />
+
+      {/* Atmosphere Gallery - Step Inside the Pub */}
+      <PubAtmosphere />
 
       {/* Welcome / About Section */}
       <AboutSection
