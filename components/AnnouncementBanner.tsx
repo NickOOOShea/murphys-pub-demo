@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { X, AlertTriangle, Calendar, Info, PartyPopper } from 'lucide-react'
 
-interface Announcement {
+export interface Announcement {
   id: string
   type: 'closure' | 'event' | 'info' | 'special'
   title: string

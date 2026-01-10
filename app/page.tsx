@@ -2,17 +2,20 @@ import Hero from '@/components/Hero'
 import PubAtmosphere from '@/components/PubAtmosphere'
 import AboutSection from '@/components/AboutSection'
 import OpeningHours from '@/components/OpeningHours'
-import AnnouncementBanner from '@/components/AnnouncementBanner'
+import AnnouncementBanner, { type Announcement } from '@/components/AnnouncementBanner'
 import businessInfo from './data/business-info.json'
 import openingHours from './data/opening-hours.json'
 import announcements from '../data/announcements.json'
 import Link from 'next/link'
 
+// Type assertion for JSON import
+const typedAnnouncements = announcements.announcements as Announcement[]
+
 export default function Home() {
   return (
     <main>
       {/* Announcements Banner */}
-      <AnnouncementBanner announcements={announcements.announcements} />
+      <AnnouncementBanner announcements={typedAnnouncements} />
 
       {/* Hero Section */}
       <Hero
