@@ -1,4 +1,4 @@
-/* Murphy's Pub - "The Snug" Design System
+/* Murphy's Pub - "The Emerald" Design System
    Fonts loaded via next/font/google in layout.tsx */
 
 @tailwind base;
@@ -6,8 +6,8 @@
 @tailwind utilities;
 
 :root {
-  /* Color tokens */
-  --whiskey-600: #B5651D;
+  /* Color tokens - Updated for green theme */
+  --emerald-600: #16a34a;
   --wood-900: #2C1810;
   --wood-950: #1A1512;
   --cream-300: #F5E6D3;
@@ -47,22 +47,22 @@
     font-size: clamp(1.5rem, 3vw, 2rem);
   }
 
-  /* Selection - whiskey amber */
+  /* Selection - emerald green */
   ::selection {
-    @apply bg-whiskey-600 text-wood-950;
+    @apply bg-emerald-600 text-white;
   }
 }
 
 @layer components {
-  /* Primary CTA - Whiskey amber */
+  /* Primary CTA - Emerald green */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2.5;
-    @apply bg-whiskey-600 text-wood-950;
+    @apply bg-emerald-600 text-white;
     @apply px-7 py-3.5 rounded-xl;
     @apply font-semibold text-base;
     @apply transition-all duration-300 ease-out;
     @apply shadow-warm hover:shadow-lifted;
-    @apply hover:bg-whiskey-500 hover:-translate-y-0.5;
+    @apply hover:bg-emerald-500 hover:-translate-y-0.5;
     @apply active:translate-y-0;
   }
 
@@ -116,9 +116,9 @@
     max-width: 1280px;
   }
 
-  /* Warm glow background */
+  /* Warm glow background - updated to green */
   .bg-warm-glow {
-    background-image: radial-gradient(ellipse at center, rgba(181, 101, 29, 0.15) 0%, transparent 70%);
+    background-image: radial-gradient(ellipse at center, rgba(22, 163, 74, 0.15) 0%, transparent 70%);
   }
 
   /* Menu board aesthetic */
@@ -138,21 +138,21 @@
     pointer-events: none;
   }
 
-  /* Brass plate effect */
-  .brass-plate {
-    @apply bg-gradient-to-br from-brass-light via-brass to-brass-dark;
-    @apply rounded-lg p-6 shadow-glow-amber;
+  /* Gold plate effect (complementary to green) */
+  .gold-plate {
+    @apply bg-gradient-to-br from-gold-light via-gold to-gold-dark;
+    @apply rounded-lg p-6 shadow-glow-emerald;
   }
 
   /* Navigation */
   .nav-link {
-    @apply text-paper-100 hover:text-whiskey-400 font-medium transition-colors duration-200;
+    @apply text-paper-100 hover:text-emerald-400 font-medium transition-colors duration-200;
     @apply relative;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-500;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-500;
     @apply transition-all duration-300;
   }
 
@@ -164,92 +164,113 @@
   .input-field {
     @apply w-full px-5 py-3.5 border-2 border-wood-700 rounded-xl;
     @apply bg-wood-900 text-paper-100;
-    @apply focus:outline-none focus:ring-2 focus:ring-whiskey-500/50 focus:border-whiskey-600;
+    @apply focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-600;
     @apply transition-all duration-200 placeholder:text-paper-300/50;
   }
 
   .textarea-field {
     @apply w-full px-5 py-3.5 border-2 border-wood-700 rounded-xl;
     @apply bg-wood-900 text-paper-100;
-    @apply focus:outline-none focus:ring-2 focus:ring-whiskey-500/50 focus:border-whiskey-600;
+    @apply focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-600;
     @apply transition-all duration-200 min-h-[150px] resize-y placeholder:text-paper-300/50;
   }
 
   /* Badge */
   .badge {
     @apply inline-flex items-center px-3 py-1.5 rounded-full;
-    @apply bg-whiskey-600/20 text-whiskey-400;
-    @apply font-semibold text-sm border border-whiskey-600/30;
+    @apply bg-emerald-600/20 text-emerald-400;
+    @apply font-semibold text-sm border border-emerald-600/30;
   }
 
   /* Divider */
   .divider {
-    @apply w-full h-px bg-gradient-to-r from-transparent via-whiskey-600/40 to-transparent my-12;
+    @apply w-full h-px bg-gradient-to-r from-transparent via-emerald-600/40 to-transparent;
   }
 
-  /* Event card */
+  /* Event card styling */
   .event-card {
-    @apply bg-wood-900/80 backdrop-blur-sm rounded-xl p-6;
-    @apply border border-wood-800 hover:border-whiskey-600/50;
-    @apply transition-all duration-300 hover:shadow-glow-amber;
+    @apply bg-wood-900 rounded-2xl p-6 border border-wood-800;
+    @apply shadow-card transition-all duration-300;
   }
 
-  /* Specials board */
-  .specials-board {
-    @apply bg-gradient-to-br from-wood-900 to-stout-brown;
-    @apply rounded-2xl p-8 border-2 border-whiskey-600/30;
-    @apply shadow-lifted;
-  }
-}
-
-@layer utilities {
-  /* Text gradient - whiskey */
-  .text-gradient-whiskey {
-    @apply bg-gradient-to-r from-whiskey-400 via-whiskey-500 to-whiskey-600;
-    @apply bg-clip-text text-transparent;
+  /* Text gradient utilities - updated for green theme */
+  .text-gradient-emerald {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  /* Animation delays */
-  .animation-delay-100 { animation-delay: 100ms; }
-  .animation-delay-200 { animation-delay: 200ms; }
-  .animation-delay-300 { animation-delay: 300ms; }
-  .animation-delay-500 { animation-delay: 500ms; }
-
-  /* Text shadows */
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(26, 21, 18, 0.3);
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #22c55e 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .text-shadow-glow {
-    text-shadow: 0 0 30px rgba(181, 101, 29, 0.4);
+    text-shadow: 0 0 20px rgba(22, 163, 74, 0.3), 0 0 40px rgba(22, 163, 74, 0.1);
   }
-}
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-}
+  /* Drop cap for storytelling */
+  .drop-cap::first-letter {
+    @apply float-left text-6xl font-bold text-emerald-500;
+    @apply mr-2 mt-1 leading-none;
+    font-family: var(--font-playfair), serif;
+  }
 
-::-webkit-scrollbar-track {
-  background: #1A1512;
-}
+  /* Animations */
+  @keyframes candle-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #4d3c30 0%, #2C1810 100%);
-  border-radius: 6px;
-  border: 2px solid #1A1512;
-}
+  .animate-candle {
+    animation: candle-flicker 3s ease-in-out infinite;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #5d4839 0%, #4d3c30 100%);
-}
+  /* Scrollbar - updated for green theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-/* Focus states */
-*:focus-visible {
-  @apply outline-2 outline-offset-2 outline-whiskey-500 rounded;
-}
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-200;
+  }
 
-/* Smooth transitions */
-button, a, input, textarea, select {
-  @apply transition-colors duration-200;
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #22c55e, #16a34a);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #16a34a, #15803d);
+  }
+
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .card {
+      @apply border-2;
+    }
+    
+    .btn-primary {
+      @apply border-2 border-emerald-800;
+    }
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
