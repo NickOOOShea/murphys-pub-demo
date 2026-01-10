@@ -3,6 +3,7 @@ import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import DemoAdminButton from '@/components/DemoAdminButton'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -105,6 +106,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <DemoAdminButton />
       </body>
     </html>
   )
