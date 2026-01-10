@@ -37,10 +37,10 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
 
-        {/* Warm overlay - cozy pub atmosphere */}
+        {/* Warm overlay - Irish green atmosphere */}
         <div className="absolute inset-0 bg-gradient-to-b from-wood-950/90 via-wood-900/80 to-wood-950/95" />
 
-        {/* Warm glow from center */}
+        {/* Green glow from center */}
         <div className="absolute inset-0 bg-warm-glow" />
 
         {/* Vignette effect */}
@@ -52,7 +52,7 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
         />
       </motion.div>
 
-      {/* Floating warm glows */}
+      {/* Floating green glows */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
@@ -61,7 +61,7 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
             scale: [1, 1.1, 0.9, 1],
           }}
           transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-whiskey-600/15 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/15 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -70,7 +70,7 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
             scale: [1, 0.9, 1.1, 1],
           }}
           transition={{ duration: 12, ease: "easeInOut", repeat: Infinity, delay: 3 }}
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-whiskey-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -107,7 +107,7 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="w-24 h-1 bg-gradient-to-r from-transparent via-whiskey-600 to-transparent mx-auto mb-8 rounded-full"
+            className="w-24 h-1 bg-gradient-to-r from-transparent via-emerald-600 to-transparent mx-auto mb-8 rounded-full"
           />
 
           {/* Tagline */}
@@ -145,23 +145,26 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
             transition={{ delay: 1.6, duration: 0.6 }}
             className="mt-12 text-paper-200/60 text-sm tracking-widest uppercase"
           >
-            Serving Cork's finest pints for over 70 years
+            Serving Cork's finest pints for 70+ years
           </motion.p>
         </div>
       </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{
-          opacity: { delay: 2, duration: 0.6 },
-          y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 2 }
-        }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <span className="text-paper-200/50 text-xs uppercase tracking-wider">Scroll</span>
-        <ChevronDown className="w-6 h-6 text-whiskey-500/70" />
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-paper-200/60"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown size={20} className="text-emerald-400" />
+        </motion.div>
       </motion.div>
     </div>
   )
