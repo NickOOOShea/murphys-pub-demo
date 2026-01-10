@@ -1,120 +1,142 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, ExternalLink } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-pub-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        {/* 5 Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-8">
+    <footer className="bg-wood-900 border-t border-wood-800">
+      <div className="section-container py-16">
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-amber-400">Murphy's Pub</h3>
-            <p className="text-gray-300 mb-4">
-              Traditional Irish hospitality since 1952. Family-owned, locally loved.
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-whiskey-600 rounded-xl flex items-center justify-center">
+                <span className="text-wood-950 font-display font-bold text-xl">M</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-display font-bold text-cream-300">Murphy's Pub</h3>
+                <p className="text-xs text-paper-200/60 tracking-wider uppercase">Est. 1952</p>
+              </div>
+            </div>
+            <p className="text-paper-200 mb-6 leading-relaxed">
+              Traditional Irish hospitality for over 70 years. Family-owned, locally loved.
             </p>
-            {/* Social Media Icons */}
+            {/* Social Icons */}
             <div className="flex gap-3">
               <a
                 href="https://facebook.com/murphyspubcork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-pub-700 hover:bg-amber-500 rounded-full transition-all hover:scale-110"
+                className="p-2.5 bg-wood-800 hover:bg-whiskey-600 text-paper-100 hover:text-wood-950 rounded-xl transition-all duration-300"
                 aria-label="Facebook"
               >
-                <Facebook size={20} />
+                <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="https://instagram.com/murphyspubcork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-pub-700 hover:bg-amber-500 rounded-full transition-all hover:scale-110"
+                className="p-2.5 bg-wood-800 hover:bg-whiskey-600 text-paper-100 hover:text-wood-950 rounded-xl transition-all duration-300"
                 aria-label="Instagram"
               >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://twitter.com/murphyspub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-pub-700 hover:bg-amber-500 rounded-full transition-all hover:scale-110"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-amber-400">Quick Links</h4>
-            <div className="space-y-2 text-gray-300">
-              <Link href="/" className="block hover:text-amber-400 transition">Home</Link>
-              <Link href="/menu" className="block hover:text-amber-400 transition">Menu</Link>
-              <Link href="/events" className="block hover:text-amber-400 transition">Events</Link>
-              <Link href="/gallery" className="block hover:text-amber-400 transition">Gallery</Link>
-              <Link href="/contact" className="block hover:text-amber-400 transition">Contact</Link>
-            </div>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold mb-4 text-amber-400">Legal</h4>
-            <div className="space-y-2 text-gray-300">
-              <Link href="/privacy" className="block hover:text-amber-400 transition">Privacy Policy</Link>
-              <Link href="/terms" className="block hover:text-amber-400 transition">Terms of Service</Link>
+            <h4 className="font-semibold text-cream-300 mb-4">Quick Links</h4>
+            <div className="space-y-3">
+              {[
+                { href: '/', label: 'Home' },
+                { href: '/menu', label: 'Menu' },
+                { href: '/events', label: 'Events' },
+                { href: '/gallery', label: 'Gallery' },
+                { href: '/contact', label: 'Contact' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block text-paper-200 hover:text-whiskey-400 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-amber-400">Contact</h4>
-            <div className="space-y-3 text-gray-300">
-              <a href="tel:+353214271234" className="flex items-center gap-2 hover:text-amber-400 transition">
-                <Phone size={16} />
-                <span>+353 21 427 1234</span>
+            <h4 className="font-semibold text-cream-300 mb-4">Contact</h4>
+            <div className="space-y-4">
+              <a
+                href="tel:+353214271234"
+                className="flex items-center gap-3 text-paper-200 hover:text-whiskey-400 transition-colors"
+              >
+                <div className="p-2 bg-wood-800 rounded-lg">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <span>021 427 1234</span>
               </a>
-              <a href="mailto:hello@murphyspub.ie" className="flex items-center gap-2 hover:text-amber-400 transition">
-                <Mail size={16} />
+              <a
+                href="mailto:hello@murphyspub.ie"
+                className="flex items-center gap-3 text-paper-200 hover:text-whiskey-400 transition-colors"
+              >
+                <div className="p-2 bg-wood-800 rounded-lg">
+                  <Mail className="w-4 h-4" />
+                </div>
                 <span>hello@murphyspub.ie</span>
               </a>
-              <div className="flex items-start gap-2">
-                <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>12 Main Street<br />Cork, Ireland<br />T12 X456</span>
+              <div className="flex items-start gap-3 text-paper-200">
+                <div className="p-2 bg-wood-800 rounded-lg">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <span>12 Main Street<br />Cork, Ireland</span>
               </div>
             </div>
           </div>
 
           {/* Opening Hours */}
           <div>
-            <h4 className="font-semibold mb-4 text-amber-400">Opening Hours</h4>
-            <div className="text-gray-300 space-y-1 text-sm">
-              <p>Mon-Thu: 12:00 - 23:30</p>
-              <p>Fri-Sat: 12:00 - 01:00</p>
-              <p>Sunday: 12:30 - 23:00</p>
-              <p className="mt-3 text-xs italic text-gray-400">
-                Kitchen closes 30 minutes before closing
+            <h4 className="font-semibold text-cream-300 mb-4">Opening Hours</h4>
+            <div className="space-y-2 text-paper-200">
+              <div className="flex justify-between">
+                <span>Mon - Thu</span>
+                <span className="text-whiskey-400">12:00 - 23:30</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Fri - Sat</span>
+                <span className="text-whiskey-400">12:00 - 01:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Sunday</span>
+                <span className="text-whiskey-400">12:30 - 23:00</span>
+              </div>
+              <p className="mt-4 text-sm text-paper-300/60 italic">
+                Kitchen closes 30 mins before closing
               </p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-pub-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+        <div className="pt-8 border-t border-wood-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-paper-300/60 text-sm">
             <p>&copy; {new Date().getFullYear()} Murphy's Pub. All rights reserved.</p>
 
-            {/* Powered by Connecteire Badge */}
-            <a
-              href="https://connecteire.ie"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs text-gray-500 hover:text-amber-400 transition-colors group"
-            >
-              <span>Website by</span>
-              <span className="font-semibold group-hover:underline">Connecteire</span>
-              <ExternalLink size={12} className="opacity-50" />
-            </a>
+            <div className="flex items-center gap-6">
+              <Link href="/privacy" className="hover:text-whiskey-400 transition-colors">Privacy</Link>
+              <Link href="/terms" className="hover:text-whiskey-400 transition-colors">Terms</Link>
+              <a
+                href="https://connecteire.ie"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-whiskey-400 transition-colors"
+              >
+                Website by <span className="font-semibold">Connecteire</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

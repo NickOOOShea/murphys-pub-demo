@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
-import { ChevronDown, Beer } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useRef } from 'react'
 
 interface HeroProps {
@@ -20,8 +20,8 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
   const ref = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
 
-  // Parallax effect - background moves slower than scroll
-  const y = useTransform(scrollY, [0, 500], [0, 250])
+  // Parallax effect
+  const y = useTransform(scrollY, [0, 500], [0, 200])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
   return (
@@ -31,185 +31,137 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
         style={{ y }}
         className="absolute inset-0 -z-20"
       >
-        {/* Pub photo background */}
+        {/* Photo background */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center scale-110"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
 
-        {/* Warm overlay - creates cozy pub atmosphere */}
-        <div className="absolute inset-0 bg-gradient-to-b from-pub-900/85 via-pub-800/75 to-pub-900/90" />
+        {/* Warm overlay - cozy pub atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-b from-wood-950/90 via-wood-900/80 to-wood-950/95" />
 
-        {/* Candlelight vignette - darker edges, warm center */}
+        {/* Warm glow from center */}
+        <div className="absolute inset-0 bg-warm-glow" />
+
+        {/* Vignette effect */}
         <div
           className="absolute inset-0"
           style={{
-            background: `
-              radial-gradient(ellipse at center,
-                transparent 0%,
-                transparent 30%,
-                rgba(58, 46, 35, 0.4) 70%,
-                rgba(26, 15, 10, 0.6) 100%
-              )
-            `
-          }}
-        />
-
-        {/* Subtle texture overlay */}
-        <div
-          className="absolute inset-0 opacity-5 mix-blend-overlay"
-          style={{
-            backgroundImage: 'url("/textures/wood-grain.png")',
-            backgroundSize: '400px 400px',
+            background: `radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(26, 21, 18, 0.5) 100%)`
           }}
         />
       </motion.div>
 
-      {/* Warm floating glows - like candlelight */}
+      {/* Floating warm glows */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             x: [0, 40, -30, 0],
             y: [0, -40, 30, 0],
             scale: [1, 1.1, 0.9, 1],
-            opacity: [0.15, 0.25, 0.15]
           }}
-          transition={{ duration: 8, ease: "easeInOut", repeat: Infinity }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-brass-500/20 rounded-full blur-3xl animate-candle"
+          transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-whiskey-600/15 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             x: [0, -40, 30, 0],
             y: [0, 40, -30, 0],
             scale: [1, 0.9, 1.1, 1],
-            opacity: [0.1, 0.2, 0.1]
           }}
-          transition={{ duration: 10, ease: "easeInOut", repeat: Infinity, delay: 3 }}
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-amber-600/15 rounded-full blur-3xl animate-candle"
-        />
-        <motion.div
-          animate={{
-            x: [0, 20, -20, 0],
-            y: [0, -20, 20, 0],
-            opacity: [0.08, 0.15, 0.08]
-          }}
-          transition={{ duration: 12, ease: "easeInOut", repeat: Infinity, delay: 6 }}
-          className="absolute top-1/2 right-1/3 w-80 h-80 bg-burgundy-500/10 rounded-full blur-3xl"
+          transition={{ duration: 12, ease: "easeInOut", repeat: Infinity, delay: 3 }}
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-whiskey-500/10 rounded-full blur-3xl"
         />
       </div>
 
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative min-h-screen flex items-center justify-center px-4 py-20"
+        className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-20"
       >
-        <div className="container mx-auto text-center">
-
-          {/* Small decorative element above headline */}
+        <div className="section-container text-center">
+          {/* Est. Badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center mb-6"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center mb-8"
           >
-            <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-brass-500/10 border border-brass-500/30">
-              <Beer className="text-brass-400" size={20} />
-              <span className="text-brass-300 font-handwriting text-lg">Est. 1952</span>
-              <Beer className="text-brass-400" size={20} />
+            <div className="badge">
+              <span>Est. 1952 • Cork, Ireland</span>
             </div>
           </motion.div>
 
-          {/* Headline - dramatic entrance */}
+          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-bold mb-6 text-cream-100"
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display font-bold mb-6 text-cream-300 text-shadow-glow"
           >
-            <span className="inline-block text-gradient-brass text-shadow-glow">
-              {headline}
-            </span>
+            {headline}
           </motion.h1>
 
           {/* Decorative divider */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="w-32 h-1 bg-brass-gradient mx-auto mb-8 rounded-full shadow-glow-brass"
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="w-24 h-1 bg-gradient-to-r from-transparent via-whiskey-600 to-transparent mx-auto mb-8 rounded-full"
           />
 
-          {/* Tagline - warm and inviting */}
+          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
-            className="text-xl md:text-3xl text-cream-200 mb-12 max-w-4xl mx-auto font-body leading-relaxed"
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="text-xl md:text-2xl text-paper-100 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             {tagline}
           </motion.p>
 
-          {/* CTA Buttons - staggered entrance */}
+          {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-5 justify-center items-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.6 }}
           >
             {ctaButtons.map((button, index) => (
-              <motion.div
+              <Link
                 key={button.text}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05, y: -3 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{
-                  opacity: { duration: 0.5, delay: 1.6 + (index * 0.15) },
-                  y: { duration: 0.5, delay: 1.6 + (index * 0.15) }
-                }}
+                href={button.href}
+                className={button.variant === 'primary' ? 'btn-primary' : 'btn-ghost'}
               >
-                <Link
-                  href={button.href}
-                  className={`
-                    inline-flex items-center gap-2 px-10 py-5 rounded-lg font-bold text-lg
-                    transition-all duration-300 shadow-lifted hover:shadow-lifted
-                    ${button.variant === 'primary'
-                      ? 'bg-brass-600 text-cream-100 hover:bg-brass-500 shadow-brass border-2 border-brass-400/50'
-                      : 'bg-pub-800/80 backdrop-blur-sm text-cream-100 hover:bg-pub-700 border-2 border-brass-500/40 hover:border-brass-400'
-                    }
-                  `}
-                >
-                  {button.text}
-                </Link>
-              </motion.div>
+                {button.text}
+              </Link>
             ))}
           </motion.div>
 
-          {/* Social proof or small detail */}
+          {/* Social proof */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.2, duration: 0.8 }}
-            className="mt-12 text-cream-300/70 text-sm tracking-widest uppercase font-body"
+            transition={{ delay: 1.6, duration: 0.6 }}
+            className="mt-12 text-paper-200/60 text-sm tracking-widest uppercase"
           >
             Serving Cork's finest pints for over 70 years
           </motion.p>
-
         </div>
       </motion.div>
 
-      {/* Animated scroll indicator - bounces gently */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 1, 1], y: [0, 12, 0] }}
+        animate={{ opacity: 1, y: [0, 8, 0] }}
         transition={{
-          opacity: { delay: 2.5, duration: 0.6 },
-          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }
+          opacity: { delay: 2, duration: 0.6 },
+          y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 2 }
         }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-cream-300/60 text-xs uppercase tracking-wider font-body">Scroll</span>
-        <ChevronDown className="text-brass-400/70" size={28} strokeWidth={2.5} />
+        <span className="text-paper-200/50 text-xs uppercase tracking-wider">Scroll</span>
+        <ChevronDown className="w-6 h-6 text-whiskey-500/70" />
       </motion.div>
     </div>
   )

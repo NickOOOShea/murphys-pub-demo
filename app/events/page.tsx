@@ -8,21 +8,26 @@ export const metadata = {
 
 export default function EventsPage() {
   return (
-    <main>
+    <main className="bg-wood-950">
       {/* Page Hero */}
-      <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-amber-600 to-amber-800 text-white">
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">What's On</h1>
-          <p className="text-xl text-amber-100">
+      <section className="relative h-[40vh] flex items-center justify-center bg-wood-950 overflow-hidden">
+        {/* Warm glow background */}
+        <div className="absolute inset-0 bg-warm-glow" />
+        
+        <div className="relative section-container text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-cream-300 mb-4 text-shadow-glow">
+            What's On
+          </h1>
+          <p className="text-xl text-paper-200">
             Live music, quiz nights, and more
           </p>
         </div>
       </section>
 
       {/* Recurring Events */}
-      <section className="py-20 bg-gradient-to-b from-white to-cream-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-pub-900 mb-12">
+      <section className="py-20 bg-wood-950">
+        <div className="section-container">
+          <h2 className="section-heading text-center mb-12">
             Weekly Events
           </h2>
 
@@ -43,10 +48,13 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="divider max-w-4xl mx-auto" />
+
       {/* Upcoming Events */}
-      <section className="py-20 bg-pub-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-pub-900 mb-12">
+      <section className="py-20 bg-wood-950">
+        <div className="section-container">
+          <h2 className="section-heading text-center mb-12">
             Coming Up
           </h2>
 
@@ -54,16 +62,16 @@ export default function EventsPage() {
             {events.upcoming.map((event, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500"
+                className="card p-6 border-l-4 border-l-whiskey-600"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-pub-900 mb-2">{event.name}</h3>
-                    <p className="text-gray-600">{event.description}</p>
+                    <h3 className="text-2xl font-bold text-cream-300 mb-2">{event.name}</h3>
+                    <p className="text-paper-200">{event.description}</p>
                   </div>
                   <div className="text-right md:text-left md:min-w-[150px]">
-                    <div className="text-lg font-bold text-amber-600">{event.date}</div>
-                    {event.time && <div className="text-gray-600">{event.time}</div>}
+                    <div className="text-lg font-bold text-whiskey-400">{event.date}</div>
+                    {event.time && <div className="text-paper-200">{event.time}</div>}
                   </div>
                 </div>
               </div>
@@ -73,10 +81,10 @@ export default function EventsPage() {
       </section>
 
       {/* Sports Notice */}
-      <section className="py-16 bg-gradient-to-r from-pub-700 to-pub-800 text-white">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-4">Sports Screenings</h2>
-          <p className="text-xl text-gray-200 leading-relaxed">
+      <section className="py-16 bg-wood-900 border-t border-wood-800">
+        <div className="section-container text-center max-w-3xl">
+          <h2 className="text-3xl font-bold text-cream-300 mb-4">Sports Screenings</h2>
+          <p className="text-xl text-paper-200 leading-relaxed">
             {events.sports.message}
           </p>
         </div>

@@ -56,45 +56,50 @@ const galleryImages = [
 
 export default function GalleryPage() {
   return (
-    <main>
+    <main className="bg-wood-950">
       {/* Page Hero */}
-      <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-pub-700 to-pub-900 text-white">
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Gallery</h1>
-          <p className="text-xl text-gray-200">
+      <section className="relative h-[40vh] flex items-center justify-center bg-wood-950 overflow-hidden">
+        {/* Warm glow background */}
+        <div className="absolute inset-0 bg-warm-glow" />
+        
+        <div className="relative section-container text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-cream-300 mb-4 text-shadow-glow">
+            Gallery
+          </h1>
+          <p className="text-xl text-paper-200">
             A glimpse inside Murphy's
           </p>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 bg-gradient-to-b from-white to-cream-50">
-        <div className="container mx-auto px-4">
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
+      <section className="py-20 bg-wood-950">
+        <div className="section-container">
+          <p className="text-center text-paper-200 mb-12 max-w-2xl mx-auto text-lg">
             Hover over photos to see the stories behind them
           </p>
 
           <Gallery images={galleryImages} columns={3} />
 
           {/* Note about images */}
-          <p className="text-center text-sm text-gray-500 mt-12 italic">
+          <p className="text-center text-sm text-paper-300 mt-12 italic">
             Want to see your photo here? Tag us @murphyspubcork on Instagram
           </p>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-pub-800 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">
+      <section className="py-16 bg-wood-900 text-center border-t border-wood-800">
+        <div className="section-container">
+          <h2 className="text-3xl font-bold text-cream-300 mb-4">
             Come Make Your Own Memories
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-paper-200 mb-8">
             We'll save you a seat
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-4 bg-amber-500 text-pub-900 rounded-lg font-semibold text-lg hover:bg-amber-400 transition-all transform hover:scale-105 shadow-xl"
+            className="btn-primary text-lg"
           >
             Visit Us
           </a>
