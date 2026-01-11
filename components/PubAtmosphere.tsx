@@ -69,8 +69,8 @@ const features = [
   },
   {
     icon: Clock,
-    title: 'Since 1952',
-    description: 'Three generations of Murphy hospitality',
+    title: 'Since 1852',
+    description: 'Six generations of Murphy hospitality',
   },
   {
     icon: Users,
@@ -152,61 +152,61 @@ export default function PubAtmosphere() {
                 {/* Warm overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-wood-950/90 via-wood-950/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
-                {/* Caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-cream-300 text-sm md:text-base font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                {/* Caption - appears on hover */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-cream-300 text-sm font-medium">
                     {image.caption}
                   </p>
                 </div>
-
-                {/* Corner accent */}
-                <div className="absolute top-2 right-2 w-6 h-6 border-t border-r border-whiskey-500/0 group-hover:border-whiskey-500/60 transition-all duration-300" />
               </motion.div>
             )
           })}
         </div>
 
-        {/* Feature Cards */}
+        {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20"
         >
-          {features.map((feature, index) => {
-            const Icon = feature.icon
-            return (
-              <motion.div
-                key={index}
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.2 }}
-                className="card-hover p-5 md:p-6 text-center group"
-              >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-whiskey-600/20 flex items-center justify-center group-hover:bg-whiskey-600/30 transition-colors">
-                  <Icon className="w-6 h-6 text-whiskey-400" />
-                </div>
-                <h3 className="text-cream-300 font-semibold mb-2">{feature.title}</h3>
-                <p className="text-paper-200/60 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
-            )
-          })}
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              className="text-center group"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-whiskey-600/20 rounded-2xl mb-4 group-hover:bg-whiskey-600/30 transition-colors">
+                <feature.icon size={28} className="text-whiskey-400" />
+              </div>
+              <h3 className="text-xl font-bold text-cream-300 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-paper-200/80 leading-relaxed">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* Pull quote */}
+        {/* Closing Statement */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
         >
-          <blockquote className="text-2xl md:text-3xl font-display text-cream-300/90 italic max-w-3xl mx-auto leading-relaxed">
-            "There are no strangers here, only friends you haven't met yet"
-          </blockquote>
-          <cite className="block mt-4 text-whiskey-500 text-sm tracking-widest uppercase">
-            — An old Irish saying
-          </cite>
+          <p className="text-2xl font-display italic text-whiskey-400 max-w-3xl mx-auto">
+            "This isn't just where we serve pints—it's where Cork comes home."
+          </p>
+          <p className="text-paper-200/60 mt-4">
+            — Tom Murphy, 6th Generation Owner
+          </p>
         </motion.div>
       </div>
     </section>
