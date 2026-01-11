@@ -32,7 +32,7 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
               {image ? (
                 <Image
                   src={image}
-                  alt="Murphy's Pub in 1952"
+                  alt="Murphy's Pub in 1852"
                   width={600}
                   height={800}
                   className="w-full h-auto"
@@ -60,7 +60,7 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
               className="section-heading"
             >
               <span className="text-gradient-whiskey">
-                Three Generations
+                Six Generations
               </span>
               <br />
               of Proper Pints
@@ -86,15 +86,15 @@ export default function AboutSection({ story, heritage, image }: AboutSectionPro
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-10">
                 <div className="text-center p-5 bg-wood-800 rounded-xl border border-wood-700">
-                  <div className="text-3xl font-bold text-whiskey-500 font-display">1952</div>
+                  <div className="text-3xl font-bold text-whiskey-500 font-display">1852</div>
                   <div className="text-sm text-paper-200/70 mt-1">Established</div>
                 </div>
                 <div className="text-center p-5 bg-wood-800 rounded-xl border border-wood-700">
-                  <div className="text-3xl font-bold text-whiskey-500 font-display">3</div>
+                  <div className="text-3xl font-bold text-whiskey-500 font-display">6</div>
                   <div className="text-sm text-paper-200/70 mt-1">Generations</div>
                 </div>
                 <div className="text-center p-5 bg-wood-800 rounded-xl border border-wood-700">
-                  <div className="text-3xl font-bold text-whiskey-500 font-display">70+</div>
+                  <div className="text-3xl font-bold text-whiskey-500 font-display">170+</div>
                   <div className="text-sm text-paper-200/70 mt-1">Years</div>
                 </div>
               </div>
