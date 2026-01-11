@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     default: "Murphy's Pub | Traditional Irish Hospitality in Cork",
     template: "%s | Murphy's Pub",
   },
-  description: 'Family-owned since 1952. Hearty food, live music, and a proper pint — all in the heart of Cork. Pull up a stool. You\'re among friends.',
+  description: 'Family-owned since 1852. Hearty food, live music, and a proper pint — all in the heart of Cork. Pull up a stool. You\'re among friends.',
   keywords: ['Cork pub', 'Irish pub', 'traditional music Cork', 'Sunday roast Cork', 'Guinness Cork', 'live music Cork', 'family pub'],
   authors: [{ name: "Murphy's Pub" }],
   openGraph: {
     title: "Murphy's Pub | Traditional Irish Hospitality",
-    description: 'Family-owned since 1952. Hearty food, live music, and a proper pint.',
+    description: 'Family-owned since 1852. Hearty food, live music, and a proper pint.',
     type: 'website',
     locale: 'en_IE',
     siteName: "Murphy's Pub",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Murphy's Pub | Cork",
-    description: 'Family-owned since 1952. Hearty food, live music, and a proper pint.',
+    description: 'Family-owned since 1852. Hearty food, live music, and a proper pint.',
   },
 }
 
@@ -46,7 +46,7 @@ const jsonLd = {
   '@type': 'BarOrPub',
   name: "Murphy's Pub",
   image: 'https://murphys-pub-demo.pages.dev/images/hero-pub-night.webp',
-  description: 'Family-owned traditional Irish pub in Cork since 1952. Hearty food, live music, and proper pints.',
+  description: 'Family-owned traditional Irish pub in Cork since 1852. Hearty food, live music, and proper pints.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '12 Main Street',
@@ -86,7 +86,7 @@ const jsonLd = {
   servesCuisine: 'Irish',
   acceptsReservations: 'True',
   menu: 'https://murphys-pub-demo.pages.dev/menu',
-  foundingDate: '1952',
+  foundingDate: '1852',
 }
 
 export default function RootLayout({
