@@ -1,11 +1,11 @@
 {
   "name": "Murphy's Pub",
-  "tagline": "Traditional Irish Hospitality Since 1952",
+  "tagline": "Traditional Irish Hospitality Since 1852",
   "heroHeadline": "Pull up a stool. You're among friends.",
-  "heroTagline": "Serving Cork's finest pints and proper craic since 1952.",
-  "established": 1952,
-  "description": "A family-owned Cork institution serving proper pints, hearty food, and genuine craic for over 70 years.",
-  "story": "Three generations of Murphys have poured pints behind this bar. What started as Seán Murphy's dream in 1952 has become a Cork institution—where locals bring visitors, where celebrations happen, and where you're never just a customer.",
+  "heroTagline": "Serving Cork's finest pints and proper craic since 1852.",
+  "established": 1852,
+  "description": "A family-owned Cork institution serving proper pints, hearty food, and genuine craic for over 170 years.",
+  "story": "Six generations of Murphys have poured pints behind this bar. What started as Seán Murphy's dream in 1852 has become a Cork institution—where locals bring visitors, where celebrations happen, and where you're never just a customer.",
   "heritage": "Still family-owned. Still pouring the same stout.",
   "address": {
     "street": "12 Main Street",
