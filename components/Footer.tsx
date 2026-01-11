@@ -15,11 +15,11 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-lg font-display font-bold text-cream-300">Murphy's Pub</h3>
-                <p className="text-xs text-paper-200/60 tracking-wider uppercase">Est. 1952</p>
+                <p className="text-xs text-paper-200/60 tracking-wider uppercase">Est. 1852</p>
               </div>
             </div>
             <p className="text-paper-200 mb-6 leading-relaxed">
-              Traditional Irish hospitality for over 70 years. Family-owned, locally loved.
+              Traditional Irish hospitality for over 170 years. Family-owned, locally loved.
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -122,20 +122,17 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-wood-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-paper-300/60 text-sm">
-            <p>&copy; {new Date().getFullYear()} Murphy's Pub. All rights reserved.</p>
-
-            <div className="flex items-center gap-6">
-              <Link href="/privacy" className="hover:text-whiskey-400 transition-colors">Privacy</Link>
-              <Link href="/terms" className="hover:text-whiskey-400 transition-colors">Terms</Link>
-              <a
-                href="https://connecteire.ie"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-whiskey-400 transition-colors"
-              >
-                Website by <span className="font-semibold">Connecteire</span>
-              </a>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-paper-300/60 text-sm">
+              © 2025 Murphy's Pub. Traditional Irish hospitality since 1852.
+            </p>
+            <div className="flex gap-6 text-sm text-paper-300/60">
+              <Link href="/privacy" className="hover:text-whiskey-400 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-whiskey-400 transition-colors">
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>

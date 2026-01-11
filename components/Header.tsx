@@ -47,7 +47,7 @@ export default function Header() {
                 Murphy's
               </span>
               <span className="text-xs text-paper-200 -mt-1 tracking-widest uppercase">
-                Est. 1952
+                Est. 1852
               </span>
             </div>
           </Link>
@@ -139,15 +139,14 @@ export default function Header() {
                   )
                 })}
 
-                {/* Phone CTA in Mobile */}
-                <div className="pt-4 mt-4 border-t border-wood-800">
+                {/* Mobile CTA */}
+                <div className="mt-6 pt-6 border-t border-wood-800">
                   <a
                     href="tel:+353214271234"
                     className="btn-primary w-full justify-center"
-                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    <Phone className="w-5 h-5" />
-                    Call Us
+                    <Phone className="w-4 h-4" />
+                    021 427 1234
                   </a>
                 </div>
               </div>

@@ -10,12 +10,12 @@ const galleryImages = [
   {
     src: '/images/gallery/interior-1.webp',
     alt: 'Cozy pub interior with wooden bar',
-    caption: 'The same bar where three generations of Murphys have pulled pints'
+    caption: 'The same bar where six generations of Murphys have pulled pints'
   },
   {
     src: '/images/gallery/food-1.webp',
     alt: 'Fish and chips with mushy peas',
-    caption: 'Tom\'s famous beer-battered haddock - the recipe hasn\'t changed since 1952'
+    caption: 'Tom\'s famous beer-battered haddock - the recipe hasn\'t changed since 1852'
   },
   {
     src: '/images/gallery/music-1.webp',
@@ -35,7 +35,7 @@ const galleryImages = [
   {
     src: '/images/gallery/exterior-1.webp',
     alt: 'Murphy\'s Pub exterior at night',
-    caption: 'The glow that\'s welcomed Cork locals for over 70 years'
+    caption: 'The glow that\'s welcomed Cork locals for over 170 years'
   },
   {
     src: '/images/gallery/food-2.webp',

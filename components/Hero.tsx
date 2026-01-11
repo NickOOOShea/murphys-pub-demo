@@ -88,7 +88,7 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
             className="flex justify-center mb-8"
           >
             <div className="badge">
-              <span>Est. 1952 • Cork, Ireland</span>
+              <span>Est. 1852 • Cork, Ireland</span>
             </div>
           </motion.div>
 
@@ -145,23 +145,25 @@ export default function Hero({ headline, tagline, backgroundImage, ctaButtons }:
             transition={{ delay: 1.6, duration: 0.6 }}
             className="mt-12 text-paper-200/60 text-sm tracking-widest uppercase"
           >
-            Serving Cork's finest pints for over 70 years
+            Six generations of Irish hospitality
           </motion.p>
-        </div>
-      </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{
-          opacity: { delay: 2, duration: 0.6 },
-          y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 2 }
-        }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-paper-200/50 text-xs uppercase tracking-wider">Scroll</span>
-        <ChevronDown className="w-6 h-6 text-whiskey-500/70" />
+          {/* Scroll indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2, duration: 0.6 }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          >
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="p-3 rounded-full border border-whiskey-600/30 bg-wood-900/30 backdrop-blur-sm"
+            >
+              <ChevronDown className="w-5 h-5 text-whiskey-400" />
+            </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   )
